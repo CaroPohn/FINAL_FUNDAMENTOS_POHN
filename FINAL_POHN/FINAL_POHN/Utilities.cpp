@@ -104,3 +104,30 @@ void SetForegroundColor(Color color)
 
 	SetConsoleTextAttribute(outputHandle, wAttrib);
 }
+
+void SetConsoleSize(int width, int height)
+{
+	HANDLE hwnd;
+	SMALL_RECT rect;
+	COORD coord;
+	CONSOLE_CURSOR_INFO cci;
+
+	coord.X = width;
+	coord.Y = height;
+
+	rect.Top = 0;
+	rect.Left = 0;
+	rect.Bottom = coord.Y - 1;
+	rect.Right = coord.X - 1;
+
+	hwnd = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleScreenBufferSize(hwnd, coord);
+	SetConsoleWindowInfo(hwnd, TRUE, &rect);
+
+	HWND hand = GetConsoleWindow();
+	SetWindowLong(hand, GWL_STYLE, GetWindowLong(hand, GWL_STYLE) & ~WS_MAXIMIZEBOX & ~WS_SIZEBOX);
+
+	GetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cci);
+	cci.bVisible = 0;
+	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cci);
+}

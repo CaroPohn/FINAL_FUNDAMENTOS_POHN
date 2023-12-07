@@ -13,6 +13,11 @@ void GameLoop()
 	Scenes previousScene = Scenes::Exit;
 	bool isNewScene;
 
+	int consoleWidth = 110;
+	int consoleHeight = 50;
+
+	SetConsoleSize(consoleWidth, consoleHeight);
+
 	do
 	{
 		isNewScene = (scene != previousScene);
