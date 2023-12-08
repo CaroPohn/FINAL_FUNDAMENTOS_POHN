@@ -2,6 +2,7 @@
 
 #include "Scenes.h"
 #include "Utilities.h"
+#include "Menu.h"
 
 static Scenes scene;
 
@@ -26,7 +27,7 @@ void GameLoop()
 		switch (scene)
 		{
 		case Scenes::Menu:
-			
+			RunMenu(scene);
 			break;
 
 		case Scenes::Play:
