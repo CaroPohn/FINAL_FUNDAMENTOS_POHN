@@ -16,7 +16,7 @@ void UpdateLoseScreen(Scenes& scene)
 
 void DrawLoseScreen(int points)
 {
-	SetForegroundColor(Color::LRED);
+	SetForegroundColor(Color::RED);
 	DrawFrame(1, 0, GetScreenWidth() - 2, GetScreenHeight() - 1);
 	SetForegroundColor(Color::WHITE);
 
