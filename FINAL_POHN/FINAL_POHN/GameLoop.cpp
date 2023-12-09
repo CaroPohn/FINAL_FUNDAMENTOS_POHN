@@ -3,8 +3,10 @@
 #include "Scenes.h"
 #include "Utilities.h"
 #include "Menu.h"
+#include "Play.h"
 
 static Scenes scene;
+static int points = 0;
 
 void GameLoop()
 {
@@ -19,6 +21,8 @@ void GameLoop()
 
 	SetConsoleSize(consoleWidth, consoleHeight);
 
+	srand(time(NULL));
+
 	do
 	{
 		isNewScene = (scene != previousScene);
@@ -31,7 +35,7 @@ void GameLoop()
 			break;
 
 		case Scenes::Play:
-			
+			RunPlay(scene, isNewScene, points);
 			break;
 
 		case Scenes::Rules:
