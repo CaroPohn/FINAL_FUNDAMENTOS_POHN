@@ -55,31 +55,6 @@ int GetScreenHeight()
 	return (!GetConsoleScreenBufferInfo(outputHandle, &screenBufferInfo)) ? 80 : screenBufferInfo.srWindow.Bottom + 1;
 }
 
-void SetBackgroundColor(Color color)
-{
-	HANDLE outputHandle = GetStdHandle(STD_OUTPUT_HANDLE);
-	WORD wAttrib = 0;
-	CONSOLE_SCREEN_BUFFER_INFO screenBufferInfo;
-
-	GetConsoleScreenBufferInfo(outputHandle, &screenBufferInfo);
-	wAttrib = screenBufferInfo.wAttributes;
-
-	wAttrib &= ~(BACKGROUND_BLUE | BACKGROUND_GREEN | BACKGROUND_RED | BACKGROUND_INTENSITY);
-
-	int c = (int)color;
-
-	if (c & 1)
-		wAttrib |= BACKGROUND_BLUE;
-	if (c & 2)
-		wAttrib |= BACKGROUND_GREEN;
-	if (c & 4)
-		wAttrib |= BACKGROUND_RED;
-	if (c & 8)
-		wAttrib |= BACKGROUND_INTENSITY;
-
-	SetConsoleTextAttribute(outputHandle, wAttrib);
-}
-
 void SetForegroundColor(Color color)
 {
 	HANDLE outputHandle = GetStdHandle(STD_OUTPUT_HANDLE);

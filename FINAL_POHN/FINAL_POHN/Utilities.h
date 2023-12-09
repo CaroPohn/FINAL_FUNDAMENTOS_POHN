@@ -35,6 +35,5 @@ void GoToCoordinates(int x, int y);
 void DrawFrame(int upLeftX, int upLeftY, int downRightX, int downRightY);
 int GetScreenWidth();
 int GetScreenHeight();
-void SetBackgroundColor(Color color);
 void SetForegroundColor(Color color);
 void SetConsoleSize(int width, int height);
