@@ -4,6 +4,7 @@
 #include "Utilities.h"
 #include "Menu.h"
 #include "Play.h"
+#include "LoseScreen.h"
 
 static Scenes scene;
 static int points = 0;
@@ -12,7 +13,7 @@ void GameLoop()
 {
 	SetConsoleTitleA("Cosmic Crusher");
 
-	scene = Scenes::Menu;
+	scene = Scenes::LoseScreen;
 	Scenes previousScene = Scenes::Exit;
 	bool isNewScene;
 
@@ -31,7 +32,7 @@ void GameLoop()
 		switch (scene)
 		{
 		case Scenes::Menu:
-			RunMenu(scene);
+			RunMenu(scene, isNewScene);
 			break;
 
 		case Scenes::Play:
@@ -51,7 +52,7 @@ void GameLoop()
 			break;
 
 		case Scenes::LoseScreen:
-			
+			RunLoseScreen(scene, points);
 			break;
 
 		case Scenes::Exit:
