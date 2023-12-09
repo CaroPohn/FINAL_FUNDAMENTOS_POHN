@@ -30,9 +30,9 @@ void BulletMovement(Bullet& bullet)
 	}
 }
 
-bool CheckBorderBulletCollision(Bullet& bullet)
+bool CheckBorderBulletCollision(Bullet bullet)
 {
-	return bullet.pos.y < 1;
+	return bullet.pos.y < 3;
 }
 
 void DrawBullet(Bullet bullet)

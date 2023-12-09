@@ -10,5 +10,5 @@ struct Bullet
 Bullet InitBullet();
 void SetBullet(Bullet& bullet, Vector2 spawnPos);
 void BulletMovement(Bullet& bullet);
-bool CheckBorderBulletCollision(Bullet& bullet);
+bool CheckBorderBulletCollision(Bullet bullet);
 void DrawBullet(Bullet bullet);
