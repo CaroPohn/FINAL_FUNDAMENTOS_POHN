@@ -7,7 +7,7 @@ Player InitPlayer()
 	player.pos.x = GetScreenWidth() / 2 - 10;
 	player.pos.y = GetScreenHeight() - 6;
 	player.prevPos = player.pos;
-	player.width = 16;
+	player.width = 12;
 	player.height = 2;
 
 	return player;
@@ -37,7 +37,7 @@ void PlayerShoot(Player& player, char key)
 		{
 			if (!player.bulletArray[i].isActive)
 			{
-				SetBullet(player.bulletArray[i], { player.pos.x + 8, player.pos.y - 1});
+				SetBullet(player.bulletArray[i], { player.pos.x + 6, player.pos.y - 1});
 				break;
 			}
 		}
@@ -56,11 +56,11 @@ void DrawPlayer(Player player)
 	SetForegroundColor(Color::LCYAN);
 
 	GoToCoordinates(player.pos.x, player.pos.y);
-	cout << "       / \\ " << endl;
+	cout << "     / \\ " << endl;
 	GoToCoordinates(player.pos.x, player.pos.y + 1);
-	cout << "   " << char(201) << char(196) << char(168) << char(196) << char(202) << " " << char(202) << char(196) << char(168) << char(196) << char(187) << endl;
+	cout << " " << char(201) << char(196) << char(168) << char(196) << char(202) << " " << char(202) << char(196) << char(168) << char(196) << char(187) << endl;
 	GoToCoordinates(player.pos.x, player.pos.y + 2);
-	cout << char(201) << char(202) << char(202) << char(188) << " " << char(153) << " " << char(186) << " " << char(186) << " " << char(153) << " " << char(200) << char(202) << char(202) << char(187) << endl;
+	cout << char(201)  << char(188) << " " << char(153) << " " << char(186) << " " << char(186) << " " << char(153) << " " << char(200) << char(187) << endl;
 
 	SetForegroundColor(Color::WHITE);
 }

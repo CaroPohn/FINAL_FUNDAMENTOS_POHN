@@ -9,6 +9,7 @@ struct Player
 	Vector2 prevPos = {};
 	int width = 0;
 	int height = 0;
+	int lives = 3;
 
 	static const int BULLET_QNTY = 30;
 	Bullet bulletArray[BULLET_QNTY];
