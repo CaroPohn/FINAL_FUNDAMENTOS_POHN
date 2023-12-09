@@ -1,6 +1,7 @@
 #pragma once
 #include "Utilities.h"
 #include "Scenes.h"
+#include "Bullet.h"
 
 struct Player
 {
@@ -8,8 +9,12 @@ struct Player
 	Vector2 prevPos = {};
 	int width = 0;
 	int height = 0;
+
+	static const int BULLET_QNTY = 30;
+	Bullet bulletArray[BULLET_QNTY];
 };
 
 Player InitPlayer();
-void UpdatePlayer(Player& player, char key);
+void MovePlayer(Player& player, char key);
+void PlayerShoot(Player& player, char key);
 void DrawPlayer(Player player);
