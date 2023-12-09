@@ -267,7 +267,12 @@ void DrawSky()
 	cout << "                 .                            .                             .             .            " << endl;
 }
 
-void RunMenu(Scenes& scene)
+void RunMenu(Scenes& scene, bool isNewScene)
 {
+	if (isNewScene)
+	{
+		system("cls");
+	}
+
 	UpdateMenu(scene);
 }

@@ -8,4 +8,4 @@ void DrawTitle(int xTitle, int yTitle);
 void DrawOptions(int xOptions, int yTitle);
 void DrawSpaceship();
 void DrawSky();
-void RunMenu(Scenes& scene);
+void RunMenu(Scenes& scene, bool isNewScene);
