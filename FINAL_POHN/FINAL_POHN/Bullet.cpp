@@ -39,8 +39,12 @@ void DrawBullet(Bullet bullet)
 {
 	if (bullet.isActive)
 	{
+		SetForegroundColor(Color::YELLOW);
+
 		GoToCoordinates(bullet.pos.x, bullet.pos.y);
 		cout << "O" << endl;
+
+		SetForegroundColor(Color::WHITE);
 
 		GoToCoordinates(bullet.pos.x, bullet.pos.y + 1);
 		cout << " " << endl;
