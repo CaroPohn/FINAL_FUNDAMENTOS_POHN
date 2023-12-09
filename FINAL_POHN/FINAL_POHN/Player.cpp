@@ -13,10 +13,9 @@ Player InitPlayer()
 	return player;
 }
 
-void UpdatePlayer(Player& player)
+void UpdatePlayer(Player& player, char key)
 {
 	player.prevPos = player.pos;
-	char key = _getch();
 
 	if (key == 'a' || key == 'A')
 	{

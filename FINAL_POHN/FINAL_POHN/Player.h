@@ -11,5 +11,5 @@ struct Player
 };
 
 Player InitPlayer();
-void UpdatePlayer(Player& player);
+void UpdatePlayer(Player& player, char key);
 void DrawPlayer(Player player);
