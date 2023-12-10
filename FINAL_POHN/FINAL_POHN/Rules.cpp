@@ -27,6 +27,7 @@ void DrawRules()
 	SetForegroundColor(Color::WHITE);
 
 	DrawRulesText();
+	DrawRulesStars();
 }
 
 void DrawRulesTitle()
@@ -107,6 +108,51 @@ void DrawRulesText()
 
 	GoToCoordinates(GetScreenWidth() - 39, GetScreenHeight() - 7);
 	cout << "Press M to go back to menu" << endl;
+}
+
+void DrawRulesStars()
+{
+	int xPlanet = 3;
+	int yPlanet = 1;
+
+	SetForegroundColor(Color::WHITE);
+
+	GoToCoordinates(xPlanet, yPlanet);
+	cout << " +  :      .       .         *       +            .           .             *     .              +      " << endl;
+	GoToCoordinates(xPlanet, yPlanet + 1);
+	cout << "           :       _     .     '            .                        .                   .             ." << endl;
+	GoToCoordinates(xPlanet, yPlanet + 2);
+	cout << "       .   !   '  (_)            ." << endl;
+	GoToCoordinates(xPlanet + 70, yPlanet + 2);
+	cout << "-+-                ,          " << endl;
+	GoToCoordinates(xPlanet, yPlanet + 3);
+	cout << " .        ,|.'      .            "<< endl;
+	GoToCoordinates(xPlanet + 70, yPlanet + 3);
+	cout << "         .                   ." << endl;
+	GoToCoordinates(xPlanet, yPlanet + 4);
+	cout << "-  -- ---(-O-`--- --  -    .    " << endl;
+	GoToCoordinates(xPlanet + 70, yPlanet + 4);
+	cout << "     .              .         " << endl;
+	GoToCoordinates(xPlanet, yPlanet + 5);
+	cout << "     .   ,`|'`.          *      ." << endl;
+	GoToCoordinates(xPlanet + 70, yPlanet + 5);
+	cout << "             +               *" << endl;
+	GoToCoordinates(xPlanet, yPlanet + 6);
+	cout << "       ,   !     .               " << endl;
+	GoToCoordinates(xPlanet + 70, yPlanet + 6);
+	cout << "  .        :       :  " << endl;
+	GoToCoordinates(xPlanet, yPlanet + 7);
+	cout << "  .        :       :             " << endl;
+	GoToCoordinates(xPlanet + 70, yPlanet + 7);
+	cout << "           .     --+--     . " << endl;
+	GoToCoordinates(xPlanet, yPlanet + 8);
+	cout << "           .     --+--         . " << endl;
+	GoToCoordinates(xPlanet + 70, yPlanet + 8);
+	cout << " .:                !  " << endl;
+	GoToCoordinates(xPlanet, yPlanet + 9);
+	cout << " .:                !        .    " << endl;
+	GoToCoordinates(xPlanet + 70, yPlanet + 9);
+	cout << "     .              .         " << endl;
 }
 
 void RunRules(Scenes& scene, bool isNewScene)
