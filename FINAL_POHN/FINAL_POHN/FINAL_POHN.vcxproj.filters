@@ -45,6 +45,12 @@
     <ClInclude Include="WinScreen.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Credits.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Rules.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utilities.cpp">
@@ -75,6 +81,12 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="WinScreen.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Rules.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Credits.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
