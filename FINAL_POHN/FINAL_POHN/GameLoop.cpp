@@ -4,8 +4,10 @@
 #include "Utilities.h"
 #include "Menu.h"
 #include "Play.h"
-#include "LoseScreen.h"
+#include "Rules.h"
+#include "Credits.h"
 #include "WinScreen.h"
+#include "LoseScreen.h"
 
 static Scenes scene;
 static int points = 0;
@@ -41,11 +43,11 @@ void GameLoop()
 			break;
 
 		case Scenes::Rules:
-			
+			RunRules(scene, isNewScene);
 			break;
 
 		case Scenes::Credits:
-			
+			RunCredits(scene, isNewScene);
 			break;
 
 		case Scenes::WinScreen:
@@ -64,4 +66,6 @@ void GameLoop()
 		}
 
 	} while (scene != Scenes::Exit);
+
+	system("cls");
 }
