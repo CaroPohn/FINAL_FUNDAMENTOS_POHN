@@ -309,6 +309,7 @@ void RunPlay(Scenes& scene, bool isNewScene, int& points)
 {
 	if (isNewScene)
 	{
+		system("cls");
 		InitPlay(points);
 	}
 
