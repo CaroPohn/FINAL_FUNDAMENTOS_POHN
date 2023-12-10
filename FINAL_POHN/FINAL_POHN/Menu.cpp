@@ -23,17 +23,14 @@ void UpdateMenu(Scenes& scene)
 		}
 		else if (selectedOption == 1)
 		{
-			system("cls");
 			scene = Scenes::Rules;
 		}
 		else if (selectedOption == 2)
 		{
-			system("cls");
 			scene = Scenes::Credits;
 		}
 		else if (selectedOption == 3)
 		{
-			system("cls");
 			scene = Scenes::Exit;
 		}
 	}
@@ -200,53 +197,55 @@ void DrawSky()
 	GoToCoordinates(xStars, yStars + 26);
 	cout << "     .                      .                            .                      .                      " << endl;
 	GoToCoordinates(xStars, yStars + 27);
-	cout << "                .                          .                         .                            .    " << endl;
+	cout << "            .            ." << endl;
+	GoToCoordinates(xStars + 75, yStars + 27);
+	cout << "  .              ." << endl;
 	GoToCoordinates(xStars, yStars + 28);
-	cout << "             .                           ." << endl;
+	cout << "             . " << endl;
 	GoToCoordinates(xStars + 90, yStars + 28);
-	cout << ".         .     " << endl;
+	cout << ".         ." << endl;
 	GoToCoordinates(xStars, yStars + 29);
-	cout << "    .              .  " << endl;
+	cout << "    .           ." << endl;
 	GoToCoordinates(xStars + 90, yStars + 29);
 	cout << "              ." << endl;
 	GoToCoordinates(xStars, yStars + 30);
-	cout << ".           .           " << endl;
+	cout << ".           . " << endl;
 	GoToCoordinates(xStars + 82, yStars + 30);
-	cout << "   .         .        " << endl;
+	cout << "   .         ." << endl;
 	GoToCoordinates(xStars, yStars + 31);
-	cout << "         .           . " << endl;
+	cout << "         .           ." << endl;
 	GoToCoordinates(xStars + 82, yStars + 31);
-	cout << "     .                 " << endl;
+	cout << "     .   " << endl;
 	GoToCoordinates(xStars, yStars + 32);
-	cout << "            .            ." << endl;
+	cout << "         .         ." << endl;
 	GoToCoordinates(xStars + 75, yStars + 32);
-	cout << "  .              .       " << endl;
+	cout << "  .              ." << endl;
 	GoToCoordinates(xStars, yStars + 33);
-	cout << "                     . " << endl;
+	cout << "                     ." << endl;
 	GoToCoordinates(xStars + 82, yStars + 33);
-	cout << "            .           " << endl;
+	cout << "            . " << endl;
 	GoToCoordinates(xStars, yStars + 34);
-	cout << "      .                 " << endl;
+	cout << "      .   " << endl;
 	GoToCoordinates(xStars + 82, yStars + 34);
-	cout << "          .        " << endl;
+	cout << "          ." << endl;
 	GoToCoordinates(xStars, yStars + 35);
-	cout << "  .                     " << endl;
+	cout << "  .   " << endl;
 	GoToCoordinates(xStars + 82, yStars + 35);
-	cout << "    .             . " << endl;
+	cout << "    .             ." << endl;
 	GoToCoordinates(xStars, yStars + 36);
-	cout << "         .              ." << endl;
+	cout << "         .          ." << endl;
 	GoToCoordinates(xStars + 82, yStars + 36);
-	cout << " .             .    " << endl;
+	cout << " .             ." << endl;
 	GoToCoordinates(xStars, yStars + 37);
-	cout << "       .         .              .     ." << endl;
+	cout << "       .         .              ." << endl;
 	GoToCoordinates(xStars + 82, yStars + 37);
 	cout << "        .           " << endl;
 	GoToCoordinates(xStars, yStars + 38);
-	cout << "  .                      .             " << endl;
+	cout << "  .                      ." << endl;
 	GoToCoordinates(xStars + 82, yStars + 38);
 	cout << "                .   " << endl;
 	GoToCoordinates(xStars, yStars + 39);
-	cout << "            .                      .  " << endl;
+	cout << "            .                      ." << endl;
 	GoToCoordinates(xStars + 82, yStars + 39);
 	cout << "     .             ." << endl;
 	GoToCoordinates(xStars, yStars + 40);
